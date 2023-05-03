@@ -1,18 +1,18 @@
-# Archlinux Toolbox
+# Gentoo Toolbox
 
-Archlinux toolbox that can be used with [Toolbox](https://github.com/containers/toolbox).
-An automated build is available in the Docker Hub as `docker.io/palazzem/archlinux-toolbox:latest`.
+Gentoo toolbox that can be used with [Toolbox](https://github.com/containers/toolbox).
 
 ## Usage
 
 From a system that has `toolbox` installed, run:
 
 ```bash
-$ toolbox create -i docker.io/palazzem/archlinux-toolbox:latest -c archlinux-toolbox
+$ podman build . -t gentoo-toolbox
+$ toolbox create -i localhost/archlinux-toolbox:latest -c archlinux-toolbox
 $ toolbox enter -c archlinux-toolbox
 
 # You should see this but with your username:
-# [palazzem@toolbox ~]$
+# [esi@toolbox ~]$
 ```
 
-This image has been introduced as an [iteration of an official PR](https://github.com/palazzem/archlinux-toolbox/pull/1).
+This package is based on [Archlinux-Toolbox](https://github.com/palazzem/archlinux-toolbox).
